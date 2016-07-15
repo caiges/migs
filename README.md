@@ -26,4 +26,4 @@
 
 ## Development
 
-If you're developing new shiny things for migs, you'll need to run `npm run watch` before running stuff like `node dist/index.js migrate`
+If you're developing new shiny things for migs, you'll need to run `npm run watch` before running stuff like `node dist/index.js migrate`.
