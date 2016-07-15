@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "es6": true,
+    "modules": true,
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "rules": {
+    "camelcase": [2, {"properties": "never"}]
+  }
+}

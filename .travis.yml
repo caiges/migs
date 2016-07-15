@@ -1,0 +1,22 @@
+sudo: required
+dist: trusty
+
+cache:
+  - apt
+
+language: node_js
+node_js:
+  - "4.2.3"
+
+script:
+  - npm test
+
+before_deploy:
+  - npm run build
+
+deploy:
+  provider: npm
+  email: "caigesn@gmail.com"
+  api_key: "20309db0-c490-49a6-b684-a51fc7fb36c6"
+  on:
+    tags: true

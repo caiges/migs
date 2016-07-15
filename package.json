@@ -1,0 +1,66 @@
+{
+  "name": "migs",
+  "version": "2.1.6",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "gulp build",
+    "check-coverage": "node_modules/.bin/istanbul check-coverage --statements 10 --branches 10 --functions 10 --lines 10 ./coverage/coverage.json",
+    "coverage": "babel-node ./node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- test/**/*.js --recursive",
+    "lint": "eslint --ext src/**/*.js --fix .",
+    "pre-commit-update": "node_modules/.bin/npm-update-outdated",
+    "test": "node_modules/mocha/bin/mocha --compilers js:babel-register test/**/*.js",
+    "watch": "gulp"
+  },
+  "pre-commit": {
+    "silent": false,
+    "colors": true,
+    "run": [
+      "lint",
+      "pre-commit-update",
+      "test"
+    ]
+  },
+  "pre-push": {
+    "silent": false,
+    "colors": true,
+    "run": [
+      "coverage"
+    ]
+  },
+  "bin": {
+    "migs": "bin/migs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/caiges/migs"
+  },
+  "author": "Caige Nichols <caigesn@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.0.5",
+    "umzug": "^1.6.0",
+    "yargs": "^3.31.0"
+  },
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-cli": "^6.3.15",
+    "babel-core": "^6.3.13",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.1.0",
+    "eslint": "^1.10.3",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-eslint": "^1.1.1",
+    "gulp-mocha": "^2.2.0",
+    "istanbul": "^1.0.0-alpha",
+    "mocha": "^2.3.3",
+    "npm-update-outdated": "^0.1.6",
+    "pre-commit": "^1.1.2",
+    "pre-push": "^0.1.1",
+    "rimraf": "^2.4.4"
+  }
+}
