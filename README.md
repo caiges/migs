@@ -26,8 +26,4 @@
 
 ## Development
 
-If you're developing new shiny things for mig, you'll need to run `npm run watch` before running stuff like `node dist/index.js migrate`
-
-## Gotchas
-
-If your umzug.json file in specific migrations repo has entries in the json array ... and you've wiped your db ... clearout the array ... should be []
+If you're developing new shiny things for migs, you'll need to run `npm run watch` before running stuff like `node dist/index.js migrate`
