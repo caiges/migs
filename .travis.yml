@@ -17,6 +17,5 @@ before_deploy:
 deploy:
   provider: npm
   email: "caigesn@gmail.com"
-  api_key: "20309db0-c490-49a6-b684-a51fc7fb36c6"
   on:
     tags: true
