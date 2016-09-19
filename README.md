@@ -19,7 +19,7 @@
 `migs migrate --direction down --env development --run`
 
 ### To a specific migration
-`migs migrate --direction up --env development --to yourmom --run`
+`migs migrate --direction up --env development --to the-moon --run`
 
 ### Generating migration files
 `migs generate --name eat_some_tacos`
